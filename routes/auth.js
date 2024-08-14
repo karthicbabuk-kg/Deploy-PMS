@@ -2,8 +2,10 @@ const express = require('express');
 const path = require('path');
 const router = express.Router();
 const authController = require('../controllers/authController');
+const app = express();
 
 router.get('/authenticate', authController.authenticateUser);
+app.use(express.static(path.join(__dirname, 'public')));
 
 router.get('/admin/*', authController.ensureAuthenticated, (req, res) => {
     if (req.session.user.role === 'admin') {
