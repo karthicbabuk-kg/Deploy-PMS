@@ -31,15 +31,15 @@ router.get('/executive', authController.ensureAuthenticated, (req, res) => {
     }
 });
 
-router.get('/admin/home', authController.ensureAuthenticated, (req, res) => {
+router.get('/home.html',(req, res) => {
     res.sendFile(path.join(__dirname, '../public/ADMIN/home.html'));
 });
 
-router.get('/tl/home', authController.ensureAuthenticated, (req, res) => {
+router.get('/home.html',(req, res) => {
     res.sendFile(path.join(__dirname, '../public/TL/home.html'));
 });
 
-router.get('/executive/home', authController.ensureAuthenticated, (req, res) => {
+router.get('/home.html',(req, res) => {
     res.sendFile(path.join(__dirname, '../public/EXECUTIVE/home.html'));
 });
 
