@@ -7,7 +7,7 @@ const app = express();
 router.get('/authenticate', authController.authenticateUser);
 app.use(express.static(path.join(__dirname, 'public')));
 
-router.get('/admin/*', authController.ensureAuthenticated, (req, res) => {
+router.get('/admin', authController.ensureAuthenticated, (req, res) => {
     if (req.session.user.role === 'admin') {
         res.sendFile(path.join(__dirname, '..', 'public', 'ADMIN', 'home.html'));
     } else {
@@ -15,7 +15,7 @@ router.get('/admin/*', authController.ensureAuthenticated, (req, res) => {
     }
 });
 
-router.get('/tl/*', authController.ensureAuthenticated, (req, res) => {
+router.get('/tl', authController.ensureAuthenticated, (req, res) => {
     if (req.session.user.role === 'tl') {
         res.sendFile(path.join(__dirname, '..','public', 'TL', 'home.html'));
     } else {
@@ -23,7 +23,7 @@ router.get('/tl/*', authController.ensureAuthenticated, (req, res) => {
     }
 });
 
-router.get('/executive/*', authController.ensureAuthenticated, (req, res) => {
+router.get('/executive', authController.ensureAuthenticated, (req, res) => {
     if (req.session.user.role === 'executive') {
         res.sendFile(path.join(__dirname, '..','public', 'EXECUTIVE', 'home.html'));
     } else {
