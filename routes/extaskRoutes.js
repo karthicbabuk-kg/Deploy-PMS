@@ -21,7 +21,7 @@ router.delete('/delete/:id', async (req, res) => {
     const taskId = req.params.id;
     try {
         // Replace with your database query to delete the task
-        const result = await db.query('DELETE FROM tasks WHERE id = ?', [taskId]);
+        const result = await db.query('DELETE FROM executivetask WHERE id = ?', [taskId]);
 
         if (result.affectedRows === 0) {
             return res.status(404).json({ message: 'Task not found' });

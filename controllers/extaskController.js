@@ -16,7 +16,7 @@ exports.addTask = async (req, res) => {
 
     try {
         await taskModel.addTask(taskData);
-        res.redirect('../executive/uploadtask.html'); // Redirect after successful insertion
+        res.redirect('../EXECUTIVE/uploadtask.html'); // Redirect after successful insertion
     } catch (error) {
         console.error('Database insert error:', error);
         res.status(500).send('Server error');
