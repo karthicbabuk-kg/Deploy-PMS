@@ -1240,6 +1240,30 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      fetch('/groups/employees')
+          .then(response => response.json())
+          .then(data => {
+              const GR_SL = document.getElementById('GR_SL');
+              const GR_SE = document.getElementById('GR_SE');
+
+              data.forEach(employee => {
+                  const optionLead = document.createElement('option');
+                  optionLead.value = employee.employeeName;
+                  optionLead.textContent = employee.employeeName;
+                  GR_SL.appendChild(optionLead);
+
+                  const optionEmployee = document.createElement('option');
+                  optionEmployee.value = employee.employeeName;
+                  optionEmployee.textContent = employee.employeeName;
+                  GR_SE.appendChild(optionEmployee);
+              });
+          })
+          .catch(error => console.error('Error fetching employee data:', error));
+  });
+</script>
+
 
   </body>
 </html>
