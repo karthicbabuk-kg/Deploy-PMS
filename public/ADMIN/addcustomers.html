@@ -321,7 +321,7 @@
                               <div class="col-md-6">
                                 <label class="form-label">Account Owner</label>
                                
-                                <select class="form-select" name="CAT_DD_AO" runat="server">
+                                <select class="form-select" name="CAT_DD_AO" runat="server" required>
                                   <option selected value="ATO"><-Select-></option>
                                   <option>Jerry Geiger</option>
                                 </select>
@@ -330,7 +330,7 @@
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">Ratings</label>
-                                <select class="form-select" onfocus="this.size=5;" onblur="this.size=1;" onchange="this.size=1; this.blur();" name="CAT_DD_RAT" runat="server">
+                                <select class="form-select" onfocus="this.size=5;" onblur="this.size=1;" onchange="this.size=1; this.blur();" name="CAT_DD_RAT" runat="server" required>
                                   <option selected value="RAT"><-Select-></option>
                                   <option>Acquired</option>
                                   <option>Active</option>
@@ -345,62 +345,62 @@
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label">Company ID</label>
-                                <input type="text" class="form-control" placeholder="Company Name" name="ACC_ID" runat="server" />
+                                <input type="text" class="form-control" placeholder="Company Name" name="ACC_ID" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">Company Name</label>
-                                <input type="text" class="form-control" placeholder="Company Name" name="CAT_CN" runat="server" />
+                                <input type="text" class="form-control" placeholder="Company Name" name="CAT_CN" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label">Parent Company Name</label>
-                          <input type="text" class="form-control" placeholder="Parent Company Name" name="CAT_PACN" runat="server" />
+                          <input type="text" class="form-control" placeholder="Parent Company Name" name="CAT_PACN" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">Website</label>
-                          <input type="text" class="form-control" placeholder="Website" name="CAT_CWS" runat="server" />
+                          <input type="text" class="form-control" placeholder="Website" name="CAT_CWS" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label">Phone</label>
-                          <input type="text" class="form-control" placeholder="Phone" name="CAT_CPHN" runat="server" />
+                          <input type="text" class="form-control" placeholder="Phone" name="CAT_CPHN" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">Fax</label>
-                                <input type="text" class="form-control" placeholder="Fax" name="CAT_FAX" runat="server" />
+                                <input type="text" class="form-control" placeholder="Fax" name="CAT_FAX" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label">Email</label>
-                                <input type="email" class="form-control" placeholder="Email" name="CAT_EM" runat="server" />
+                                <input type="email" class="form-control" placeholder="Email" name="CAT_EM" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">Accounts Email</label>
-                                <input type="email" class="form-control" placeholder="Accounts Email" name="CAT_ACEMLS" runat="server" />
+                                <input type="email" class="form-control" placeholder="Accounts Email" name="CAT_ACEMLS" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label">CEO Name</label>
-                          <input type="text" class="form-control" placeholder="Phone" name="CAT_CEONM" runat="server" />
+                          <input type="text" class="form-control" placeholder="Phone" name="CAT_CEONM" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">CEO Email</label>
-                                <input type="text" class="form-control" placeholder="CEO Email" name="CAT_CEOEM" runat="server" />
+                                <input type="text" class="form-control" placeholder="CEO Email" name="CAT_CEOEM" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label">Company Type</label>
-                                <select class="form-select" onfocus="this.size=5;" onblur="this.size=1;" onchange="this.size=1; this.blur();" name="CAT_DD_CT" runat="server">
+                                <select class="form-select" onfocus="this.size=5;" onblur="this.size=1;" onchange="this.size=1; this.blur();" name="CAT_DD_CT" runat="server" required>
                                   <option selected value="CTY"><-Select-></option>
                                   <option>Other</option>
                                   <option>Public</option>
@@ -414,7 +414,7 @@
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">Ownership</label>
-                                <select class="form-select" onfocus="this.size=5;" onblur="this.size=1;" onchange="this.size=1; this.blur();" name="CAT_DD_OWR" runat="server">
+                                <select class="form-select" onfocus="this.size=5;" onblur="this.size=1;" onchange="this.size=1; this.blur();" name="CAT_DD_OWR" runat="server" required>
                                   <option selected value="OWN"><-Select-></option>
                                   <option>Analyst</option>
                                   <option>Competitor</option>
@@ -437,7 +437,7 @@
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label">Industry</label>
-                                <select class="form-select" onfocus="this.size=5;" onblur="this.size=1;" onchange="this.size=1; this.blur();" name="CAT_IND" runat="server">
+                                <select class="form-select" onfocus="this.size=5;" onblur="this.size=1;" onchange="this.size=1; this.blur();" name="CAT_IND" runat="server" required>
                                   <option selected value="IND"><-Select-></option>
                                   <option>Asp(Application Service Provider)</option>
                                   <option>Data/Telecom OEM</option>
@@ -460,7 +460,7 @@
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">Employees</label>
-                          <input type="text" placeholder="Employees" class="form-control" name="CAT_EMP" runat="server" />
+                          <input type="text" placeholder="Employees" class="form-control" name="CAT_EMP" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
@@ -469,28 +469,28 @@
                                 <label class="form-label">Annual Revenue</label>
                                 <div class="input-group">
                                   <div class="input-group-prepend">
-                                    <select class="form-select" name="CAT_DD_AMO" runat="server">
+                                    <select class="form-select" name="CAT_DD_AMO" runat="server" required>
                                       <option selected value="ANR"><-Select-></option>
                                       <option>USD</option>
                                       <option>INR</option>
                                       <option>EURO</option>
                                     </select>
                                   </div>
-                                  <input type="text" class="form-control" placeholder="Annual Revenue" name="CAT_AR" runat="server" />
+                                  <input type="text" class="form-control" placeholder="Annual Revenue" name="CAT_AR" runat="server" required/>
                                 </div>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">Expected Revenue</label>
                                 <div class="input-group">
                                   <div class="input-group-prepend">
-                                    <select class="form-select" name="CAT_DD_AMO0" runat="server">
+                                    <select class="form-select" name="CAT_DD_AMO0" runat="server" required>
                                       <option selected value="ENR"><-Select-></option>
                                       <option>USD</option>
                                       <option>INR</option>
                                       <option>EURO</option>
                                     </select>
                                   </div>
-                                  <input type="text" class="form-control" placeholder="Annual Revenue" name="CAT_ER" runat="server" />
+                                  <input type="text" class="form-control" placeholder="Annual Revenue" name="CAT_ER" runat="server" required/>
                                 </div>
                               </div>
                              
@@ -500,11 +500,11 @@
                              <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Primary Contact Name</label>
-                          <input type="text" class="form-control" placeholder="Primary Contact" name="CAT_PCN" runat="server" />
+                          <input type="text" class="form-control" placeholder="Primary Contact" name="CAT_PCN" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Secondary Contact Name</label>
-                                <input type="text" class="form-control" placeholder="Primary Contact" name="CAT_SCN" runat="server" />
+                                <input type="text" class="form-control" placeholder="Primary Contact" name="CAT_SCN" runat="server" required/>
                               </div>
                             
                             </div>
@@ -513,11 +513,11 @@
                               
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Primary Phone</label>
-                                <input type="text" class="form-control" placeholder="Phone" name="CAT_PPHN" runat="server" />
+                                <input type="text" class="form-control" placeholder="Phone" name="CAT_PPHN" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Secondary Phone</label>
-                                <input type="text" class="form-control" placeholder="Phone" name="CAT_SPHN" runat="server" />
+                                <input type="text" class="form-control" placeholder="Phone" name="CAT_SPHN" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
@@ -525,11 +525,11 @@
                               
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Primary Email</label>
-                                <input type="text" class="form-control" placeholder="Email" name="CAT_PEML" runat="server" />
+                                <input type="text" class="form-control" placeholder="Email" name="CAT_PEML" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Secondary Email</label>
-                                <input type="text" class="form-control" placeholder="Email" name="CAT_SEML" runat="server" />
+                                <input type="text" class="form-control" placeholder="Email" name="CAT_SEML" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
@@ -537,14 +537,14 @@
                               
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Primary Designation</label>
-                                <select class="form-select" name="CAT_DD_PD" runat="server">
+                                <select class="form-select" name="CAT_DD_PD" runat="server" required>
                                   <option selected value="PD"><-Select-></option>
                                   <option>NA</option>
                                 </select>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Secondary Designation</label>
-                                <select class="form-select" name="CAT_DD_SD" runat="server">
+                                <select class="form-select" name="CAT_DD_SD" runat="server" required>
                                   <option selected value="SD"><-Select-></option>
                                   <option>NA</option>
                                 </select>
@@ -555,11 +555,11 @@
                               
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Remarks</label>
-                                <input type="text" class="form-control" placeholder="Remarks" name="CAT_PRMKS" runat="server" />
+                                <input type="text" class="form-control" placeholder="Remarks" name="CAT_PRMKS" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Remarks</label>
-                                <input type="text" class="form-control" placeholder="Remarks" name="CAT_SRMKS" runat="server" />
+                                <input type="text" class="form-control" placeholder="Remarks" name="CAT_SRMKS" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
@@ -577,18 +577,18 @@
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label">Bank Account Number</label>
-                                <input type="text" class="form-control" placeholder="Account Number" name="CAT_BAN" runat="server" />
+                                <input type="text" class="form-control" placeholder="Account Number" name="CAT_BAN" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">Account Holder Name</label>
-                                <input type="text" class="form-control" placeholder="Account Name" name="CAT_AHN" runat="server" />
+                                <input type="text" class="form-control" placeholder="Account Name" name="CAT_AHN" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label">IFSC Code</label>
-                                <input type="text" class="form-control" placeholder="IFSC Code" name="CAT_IFC" runat="server" />
+                                <input type="text" class="form-control" placeholder="IFSC Code" name="CAT_IFC" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">Branch Name</label>
@@ -599,11 +599,11 @@
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label">SIC Code</label>
-                                <input type="text" class="form-control" placeholder="Sic Code" name="CAT_SIC" runat="server" />
+                                <input type="text" class="form-control" placeholder="Sic Code" name="CAT_SIC" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">TCS/TDS</label>
-                                  <select class="form-select" name="CAT_TCS" runat="server">
+                                  <select class="form-select" name="CAT_TCS" runat="server" required>
                                     <option selected value="TCS"><-Select-></option>
                                     <option>TCS</option>
                                     <option>TDS</option>
@@ -614,11 +614,11 @@
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label">Company PAN No</label>
-                                <input type="text" class="form-control" placeholder="PAN No" name="CAT_PAN" runat="server" />
+                                <input type="text" class="form-control" placeholder="PAN No" name="CAT_PAN" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">Company GST/VAT No</label>
-                                <input type="text" class="form-control" placeholder="GST/VAT No" name="CAT_GV" runat="server" />
+                                <input type="text" class="form-control" placeholder="GST/VAT No" name="CAT_GV" runat="server" required/>
                               </div>
                             </div>
                            
@@ -626,11 +626,11 @@
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label">Credit Amount Allowed</label>
-                                <input type="text" class="form-control" placeholder="Credit Amount Allowed" name="CAT_CAA" runat="server" />
+                                <input type="text" class="form-control" placeholder="Credit Amount Allowed" name="CAT_CAA" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">Credit Age</label>
-                                <input type="text" class="form-control" placeholder="Credit Age" name="CAT_CAG" runat="server" />
+                                <input type="text" class="form-control" placeholder="Credit Age" name="CAT_CAG" runat="server" required/>
                               </div>
                             </div>
                           
@@ -649,55 +649,55 @@
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Billing Street</label>
-                                <input type="text" class="form-control" placeholder="Billing Street" name="CAT_BSR" runat="server" />
+                                <input type="text" class="form-control" placeholder="Billing Street" name="CAT_BSR" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Shipping Street</label>
-                                <input type="text" class="form-control" placeholder="Shipping Street" name="CAT_SSR" runat="server" />
+                                <input type="text" class="form-control" placeholder="Shipping Street" name="CAT_SSR" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Billing City</label>
-                          <input type="text" class="form-control" placeholder="Billing City" name="CAT_BCI" runat="server" />
+                          <input type="text" class="form-control" placeholder="Billing City" name="CAT_BCI" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Shipping City</label>
-                          <input type="text" class="form-control" placeholder="Shipping City" name="CAT_SCI" runat="server" />
+                          <input type="text" class="form-control" placeholder="Shipping City" name="CAT_SCI" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Billing State</label>
-                          <input type="text" class="form-control" placeholder="Billing State" name="CAT_BST" runat="server" />
+                          <input type="text" class="form-control" placeholder="Billing State" name="CAT_BST" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Shipping State</label>
-                          <input type="text" class="form-control" placeholder="Shipping State" name="CAT_SST" runat="server" />
+                          <input type="text" class="form-control" placeholder="Shipping State" name="CAT_SST" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Billing Zipcode</label>
-                          <input type="text" class="form-control" placeholder="Billing Zipcode" name="CAT_BZP" runat="server" />
+                          <input type="text" class="form-control" placeholder="Billing Zipcode" name="CAT_BZP" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Shipping Zipcode</label>
-                                <input type="text" class="form-control" placeholder="Shipping Zipcode" name="CAT_SZP" runat="server" />
+                                <input type="text" class="form-control" placeholder="Shipping Zipcode" name="CAT_SZP" runat="server" required/>
                               </div>
                             </div>
                             <!-- end row -->
                             <div class="row mt-2">
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Billing Country</label>
-                                <input type="text" class="form-control" placeholder="Billing Country" name="CAT_BC0" runat="server" />
+                                <input type="text" class="form-control" placeholder="Billing Country" name="CAT_BC0" runat="server" required/>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label" style="margin-top: 10px;">Shipping Country</label>
-                                <input type="text" class="form-control" placeholder="Shipping Country" name="CAT_SCO" runat="server" />
+                                <input type="text" class="form-control" placeholder="Shipping Country" name="CAT_SCO" runat="server" required />
                               </div>
                             </div>
                             <!-- end row -->

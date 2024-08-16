@@ -299,7 +299,7 @@
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6">
                                         <label class="form-label">Module</label>
-                                        <select class="form-select" name="module">
+                                        <select class="form-select" name="module" required>
                                             <option selected value="EDQ"><-Select-></option>
                                             <option>CRM</option>
                                             <option>Admin Central</option>
@@ -308,7 +308,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label">Sub Module</label>
-                                        <select class="form-select" name="subModule">
+                                        <select class="form-select" name="subModule" required>
                                             <option selected value="SOU"><-Select-></option>
                                             <option>Company</option>
                                             <option>Employees</option>
@@ -332,7 +332,7 @@
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6">
                                         <label class="form-label">Column Name</label>
-                                        <select class="form-select" name="columnName" id="columnName">
+                                        <select class="form-select" name="columnName" id="columnName" required>
                                             <option selected value="EDQ"><-Select-></option>
                                             <option value="Gender">Gender</option>
                                             <option value="Department Category">Department Category</option>
@@ -340,7 +340,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label">Column Description</label>
-                                        <select class="form-select" name="columnDescription" id="columnDescription">
+                                        <select class="form-select" name="columnDescription" id="columnDescription" required>
                                             <option selected value="EDQ"><-Select-></option>
                                             <option>NA</option>
                                         </select>
@@ -350,7 +350,7 @@
                                 <div class="row" style="margin-top: 10px;">
                                     <div class="col-md-6">
                                         <label class="form-label">Status</label>
-                                        <select class="form-select" name="status">
+                                        <select class="form-select" name="status" required>
                                             <option selected value="EDQ"><-Select-></option>
                                             <option>Active</option>
                                             <option>Inactive</option>
@@ -358,7 +358,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label">Add Column Description</label>
-                                        <input type="text" class="form-control" name="addColumnDescription" placeholder="Description">
+                                        <input type="text" class="form-control" name="addColumnDescription" placeholder="Description" required>
                                     </div>
                                 </div>
                             </form>
