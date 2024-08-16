@@ -49,7 +49,7 @@ exports.addEmployee = async (req, res) => {
         const [result] = await db.query(query, values);
 
         console.log("Insert Result: ", JSON.stringify(result));
-        res.redirect('/admin/employees.html');
+        res.redirect('../admin/employees.html');
     } catch (error) {
         console.error('Database insert error:', error);
         res.status(500).send('Server error');

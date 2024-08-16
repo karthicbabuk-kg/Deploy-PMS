@@ -26,7 +26,7 @@
             );
 
             console.log("Insert Result: ", JSON.stringify(result));
-            res.redirect('/admin/company.html'); // Redirect to the company after successful insert
+            res.redirect('../ADMIN/company.html'); // Redirect to the company after successful insert
         } catch (error) {
             console.error('Database insert error:', error);
             res.status(500).send('Server error');

@@ -26,7 +26,6 @@ router.post('/add', upload.single('ATK_DOC'), taskController.addTask);
 router.get('/get', taskController.getTasks);
 
 // Route to delete a task
-router.delete('/:id', taskController.deleteTask);
 
 router.get('/tasks', async (req, res) => {
     try {
@@ -38,20 +37,58 @@ router.get('/tasks', async (req, res) => {
     }
 });
 
-// router.get('/tasks', async (req, res) => {
-//     try {
-//         const query = `
-//             SELECT t.task_id, t.file, t.remarks, t.status, g.executive_name, c.company_name
-//             FROM tasks t
-//             JOIN grp g ON t.executive_id = g.executive_id
-//             JOIN grp c ON t.company_id = c.company_id
-//         `;
-//         const [rows] = await db.query(query);
-//         res.json(rows);
-//     } catch (error) {
-//         console.error('Error fetching tasks:', error);
-//         res.status(500).send('Server error');
-//     }
-// });
+router.delete('/delete/:id', async (req, res) => {
+    const groupId = req.params.id;
+    try {
+        const result = await db.query('DELETE FROM `grp` WHERE id = ?', [groupId]);
 
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ message: 'Group not found' });
+        }
+
+        res.json({ message: 'task deleted successfully' });
+    } catch (error) {
+        console.error('Database delete error:', error);
+        res.status(500).send('Server error');
+    }
+});
+
+router.delete('/delTask/:id', async (req, res) => {
+    const groupId = req.params.id;
+    try {
+        const result = await db.query('DELETE FROM `executivetask` WHERE id = ?', [groupId]);
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ message: 'Group not found' });
+        }
+
+        res.json({ message: 'task deleted successfully' });
+    } catch (error) {
+        console.error('Database delete error:', error);
+        res.status(500).send('Server error');
+    }
+});
+
+router.get('/gets', async (req, res) => {
+    try {
+        const [rows] = await db.query('SELECT employee, company FROM grp');
+        res.json(rows);
+    } catch (error) {
+        console.error('Error fetching group data:', error);
+        res.status(500).json({ error: 'Failed to fetch group data' });
+    }
+});
+
+router.delete('/owndelete/:id', async (req, res) => {
+    const taskId = req.params.id;
+    try {
+        // Replace with your database query to delete the task
+        await db.query('DELETE FROM tasks WHERE id = ?', [taskId]);
+
+        res.status(200).json({ message: 'Task deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting task:', error);
+        res.status(500).json({ error: 'Failed to delete task' });
+    }
+});
 module.exports = router;

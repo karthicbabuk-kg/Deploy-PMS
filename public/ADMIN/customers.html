@@ -1119,7 +1119,7 @@
 
     // Confirm before deleting
     if (confirm('Are you sure you want to delete this customer?')) {
-        fetch(`/delete/${customerId}`, {
+        fetch(`/customers/delete/${customerId}`, {
             method: 'DELETE',
         })
         .then(response => {

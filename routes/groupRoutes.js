@@ -45,23 +45,21 @@ router.get('/companies', async (req, res) => {
   router.get('/employees', groupController.getEmployees);
   router.get('/get', groupController.getGroups);
 
-  router.delete('/groups/delete/:id', (req, res) => {
+  router.delete('/delete/:id', async (req, res) => {
     const groupId = req.params.id;
 
-    // SQL query to delete the group
-    const sql = 'DELETE FROM groups WHERE id = ?';
-    db.query(sql, [groupId], (err, result) => {
-        if (err) {
-            console.error('Error deleting group:', err);
-            return res.status(500).send('Server error');
-        }
+    try {
+        const result = await db.query('DELETE FROM `grp` WHERE id = ?', [groupId]);
 
         if (result.affectedRows === 0) {
-            return res.status(404).send('Group not found');
+            return res.status(404).json({ message: 'Group not found' });
         }
 
-        res.status(200).send('Group deleted');
-    });
+        res.json({ message: 'Group deleted successfully' });
+    } catch (error) {
+        console.error('Database delete error:', error);
+        res.status(500).send('Server error');
+    }
 });
 
 

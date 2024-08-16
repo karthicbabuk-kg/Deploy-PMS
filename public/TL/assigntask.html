@@ -1075,7 +1075,7 @@
     </script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
     fetch('/addTask/tasks')
         .then(response => response.json())
         .then(data => {
@@ -1090,21 +1090,51 @@
                     <td>${task.taskName}</td>
                     <td>${task.status}</td>
                     <td>
-                        <a href="javascript:void(0);" class="action-icon">
+                        <a href="javascript:void(0);" class="action-icon edit-icon">
                             <i class="mdi mdi-square-edit-outline"></i>
                         </a>
-                        <a href="javascript:void(0);" class="action-icon">
+                        <a href="javascript:void(0);" class="action-icon delete-icon" data-task-id="${task.id}">
                             <i class="mdi mdi-delete"></i>
                         </a>
                     </td>
                 `;
                 tableBody.appendChild(row);
             });
+
+            // Attach event listeners to delete icons
+            document.querySelectorAll('.delete-icon').forEach(icon => {
+                icon.addEventListener('click', function() {
+                    const taskId = this.getAttribute('data-task-id');
+                    deleteTask(taskId, this);
+                });
+            });
         })
         .catch(error => {
             console.error('Error fetching tasks:', error);
         });
 });
+
+// Function to delete a task
+function deleteTask(taskId, deleteIcon) {
+    const confirmed = confirm('Are you sure you want to delete this task?');
+    if (!confirmed) return;
+
+    fetch(`/addTask/owndelete/${taskId}`, {
+        method: 'DELETE',
+    })
+    .then(response => {
+        if (response.ok) {
+            // Remove the task's row from the table
+            const row = deleteIcon.closest('tr');
+            row.remove();
+        } else {
+            console.error('Failed to delete task');
+        }
+    })
+    .catch(error => {
+        console.error('Error deleting task:', error);
+    });
+}
 
     </script>
   </body>

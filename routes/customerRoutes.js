@@ -21,7 +21,7 @@ router.get('/get', async (req, res) => {
     }
 });
 
-router.delete('/customers/delete/:id', (req, res) => {
+router.delete('/delete/:id', (req, res) => {
     const customerId = req.params.id;
 
     // SQL query to delete the customer

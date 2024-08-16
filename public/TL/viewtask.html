@@ -1088,35 +1088,61 @@
        
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-      fetch('/tasks/get')
-          .then(response => response.json())
-          .then(data => {
-              const tableBody = document.getElementById('taskTableBody');
-              tableBody.innerHTML = ''; // Clear existing rows
-              
-              data.forEach((group,i) => {
-                  const row = document.createElement('tr');
-                  
-                  row.innerHTML = `
-                      <td>${group.employee}</td>
-                      <td>${group.companyName}</td>
-                      <td>${group.file}</td>
-                      <td>${group.remarks}</td>
-                      <td>${group.status}</td>
-                   
-                      <td>
-                          <a href="javascript:void(0);" class="action-icon"> 
-                              <i class="mdi mdi-delete"></i>
-                          </a>
-                      </td>
-                  `;
-                  
-                  tableBody.appendChild(row);
-              });
-          })
-          .catch(error => console.error('Error fetching group data:', error));
-  });
+ document.addEventListener('DOMContentLoaded', () => {
+    fetch('/tasks/get')
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.getElementById('taskTableBody');
+            tableBody.innerHTML = ''; // Clear existing rows
+            
+            data.forEach((group, i) => {
+                const row = document.createElement('tr');
+                
+                row.innerHTML = `
+                    <td>${group.employee}</td>
+                    <td>${group.companyName}</td>
+                    <td>${group.file}</td>
+                    <td>${group.remarks}</td>
+                    <td>${group.status}</td>
+                    <td>
+                        <a href="javascript:void(0);" class="action-icon delete-task" data-id="${group.id}"> 
+                            <i class="mdi mdi-delete"></i>
+                        </a>
+                    </td>
+                `;
+                
+                tableBody.appendChild(row);
+            });
+
+            // Add event listener for delete icons
+            document.querySelectorAll('.delete-task').forEach(deleteIcon => {
+                deleteIcon.addEventListener('click', function() {
+                    const taskId = this.getAttribute('data-id');
+                    if (confirm('Are you sure you want to delete this task?')) {
+                        deleteTask(taskId);
+                    }
+                });
+            });
+        })
+        .catch(error => console.error('Error fetching group data:', error));
+});
+
+// Function to delete a task
+function deleteTask(taskId) {
+    fetch(`/addTask/delTask/${taskId}`, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (response.ok) {
+            // Task deleted successfully, refresh the task list
+            alert('Task deleted successfully');
+            location.reload(); // Refresh page or re-fetch data
+        } else {
+            alert('Error deleting task');
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
 </script>
 
 

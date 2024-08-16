@@ -18,7 +18,7 @@ exports.uploadCustomerDocument = async (req, res) => {
         );
 
         console.log("Insert Result: ", JSON.stringify(result));
-        res.redirect('/admin/cutomerdocuments.html'); // Redirect after successful insert
+        res.redirect('../admin/cutomerdocuments.html'); // Redirect after successful insert
     } catch (error) {
         console.error('Database insert error:', error);
         res.status(500).send('Server error');

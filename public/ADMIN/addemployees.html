@@ -2686,37 +2686,37 @@
         var bioMetricId = document.getElementById("AEM_ID").value.trim();
 
         // Check if any of the required fields are empty
-        // if (
-        //   employeeName === "" ||
-        //   employeeCode === "" ||
-        //   gender === "" ||
-        //   company === "" ||
-        //   departmentCategory === "" ||
-        //   departmentName === "" ||
-        //   departmentDesignation === "" ||
-        //   shift === "" ||
-        //   shiftStartTime === "" ||
-        //   shiftEndTime === "" ||
-        //   educationalQualification === "" ||
-        //   department === "" ||
-        //   experience === "" ||
-        //   previousCompany === "" ||
-        //   relevantExpYears === "" ||
-        //   relevantExpMonths === "" ||
-        //   dob === "" ||
-        //   placeOfBirth === "" ||
-        //   bloodGroup === "" ||
-        //   dateOfJoining === "" ||
-        //   employmentType === "" ||
-        //   employmentStatus === "" ||
-        //   personalMobile === "" ||
-        //   workMobile === "" ||
-        //   extension === "" ||
-        //   bioMetricId === ""
-        // ) {
-        //   showAlertModal("Please fill out all required fields in Primary Details.");
-        //   return false;
-        // }
+        if (
+          employeeName === "" ||
+          employeeCode === "" ||
+          gender === "" ||
+          company === "" ||
+          departmentCategory === "" ||
+          departmentName === "" ||
+          departmentDesignation === "" ||
+          shift === "" ||
+          shiftStartTime === "" ||
+          shiftEndTime === "" ||
+          educationalQualification === "" ||
+          department === "" ||
+          experience === "" ||
+          previousCompany === "" ||
+          relevantExpYears === "" ||
+          relevantExpMonths === "" ||
+          dob === "" ||
+          placeOfBirth === "" ||
+          bloodGroup === "" ||
+          dateOfJoining === "" ||
+          employmentType === "" ||
+          employmentStatus === "" ||
+          personalMobile === "" ||
+          workMobile === "" ||
+          extension === "" ||
+          bioMetricId === ""
+        ) {
+          showAlertModal("Please fill out all required fields in Primary Details.");
+          return false;
+        }
 
         // Retrieve all input field values
         var fatherName = document.getElementById("AEM_FN").value.trim();
@@ -2747,31 +2747,31 @@
         var email = document.getElementById("AEM_EMAIL").value.trim();
 
         // Check if any of the required fields are empty
-        // if (
-        //   fatherName === "" ||
-        //   motherName === "" ||
-        //   residentialAddress === "" ||
-        //   addressLine1 === "" ||
-        //   addressLine2 === "" ||
-        //   city === "" ||
-        //   district === "" ||
-        //   state === "" ||
-        //   pincode === "" ||
-        //   country === "" ||
-        //   permanentAddress === "" ||
-        //   permanentAddressLine1 === "" ||
-        //   permanentAddressLine2 === "" ||
-        //   permanentCity === "" ||
-        //   permanentDistrict === "" ||
-        //   permanentState === "" ||
-        //   permanentPincode === "" ||
-        //   permanentCountry === "" ||
-        //   contactNumber === "" ||
-        //   email === ""
-        // ) {
-        //   showAlertModal("Please fill out all required fields in Personal Details.");
-        //   return false;
-        // }
+        if (
+          fatherName === "" ||
+          motherName === "" ||
+          residentialAddress === "" ||
+          addressLine1 === "" ||
+          addressLine2 === "" ||
+          city === "" ||
+          district === "" ||
+          state === "" ||
+          pincode === "" ||
+          country === "" ||
+          permanentAddress === "" ||
+          permanentAddressLine1 === "" ||
+          permanentAddressLine2 === "" ||
+          permanentCity === "" ||
+          permanentDistrict === "" ||
+          permanentState === "" ||
+          permanentPincode === "" ||
+          permanentCountry === "" ||
+          contactNumber === "" ||
+          email === ""
+        ) {
+          showAlertModal("Please fill out all required fields in Personal Details.");
+          return false;
+        }
         // Retrieve all input field values
         var aadharCard = document.getElementById("AEM_AC").value.trim();
         var voterID = document.getElementById("AEM_VID").value.trim();
@@ -2789,26 +2789,26 @@
         var accountNo = document.getElementById("AEM_ATN").value.trim();
         var DocuMent = document.getElementById("AEM_DOC").value.trim();
         // Check if any of the required fields are empty
-        // if (
-        //  aadharCard === "" ||
-        //   voterID === "" ||
-        //   recordStatus === "" ||
-        //   recordLocation === "" ||
-        //   remarks === "" ||
-        //   uanNumber === "" ||
-        //   loginID === "" ||
-        //   password === "" ||
-        //   uanLoginPhone === "" ||
-        //   aadharLinkPhone === "" ||
-        //   bankName === "" ||
-        //   branch === "" ||
-        //   ifscCode === "" ||
-        //   accountNo === "" ||
-        //   DocuMent === ""
-        // ) {
-        //   showAlertModal("Please fill out all required fields in Official Details.");
-        //   return false;
-        // }
+        if (
+         aadharCard === "" ||
+          voterID === "" ||
+          recordStatus === "" ||
+          recordLocation === "" ||
+          remarks === "" ||
+          uanNumber === "" ||
+          loginID === "" ||
+          password === "" ||
+          uanLoginPhone === "" ||
+          aadharLinkPhone === "" ||
+          bankName === "" ||
+          branch === "" ||
+          ifscCode === "" ||
+          accountNo === "" ||
+          DocuMent === ""
+        ) {
+          showAlertModal("Please fill out all required fields in Official Details.");
+          return false;
+        }
 
         // Display modal if validation is successful
         $("#info-alert-modal2").modal("show");

@@ -15,7 +15,7 @@ exports.createMasterData = async (req, res) => {
         );
 
     console.log("Insert Result: ", JSON.stringify(result));
-    res.redirect('/admin/MasterData.html'); 
+    res.redirect('../admin/MasterData.html'); 
 } catch (error) {
     console.error('Database insert error:', error);
     res.status(500).send('Server error');
