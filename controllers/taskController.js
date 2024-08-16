@@ -20,7 +20,7 @@ exports.addTask = async (req, res) => {
         );
 
         console.log("Insert Result: ", JSON.stringify(result));
-        res.redirect('../tl/addtask.html');
+        res.redirect('../TL/addtask.html');
     } catch (error) {
         console.error('Database insert error:', error);
         res.status(500).send('Server error');
